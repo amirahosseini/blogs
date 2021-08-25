@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-
-body{
+html,body{
   margin: 0;
   font-family: "Quicksand";
+  height: 100%;
+
 }
 .nav-div{
   display: flex;
@@ -49,3 +50,196 @@ body{
 {
   color: #8362fd;
 }
+.loading-placement{
+position: fixed;
+display: flex;
+width: 100%;
+  height: 100%;
+}
+.centerize
+{
+  margin: 30vh 0vh 0vh 48%;
+}
+.circle
+{
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  position: relative;
+}
+.c1{
+  background-color: #3c1361;
+  animation-name: c1-move;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+
+}
+.c2{
+  background-color: #b881d8;
+  left: 32px;
+  animation-name: c2-move;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+
+
+}
+.c3{
+  background-color: #8961a2;
+  top: 12px;
+  left: 25px;
+  animation-name: c3-move;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+
+}
+.c4{
+  background-color:  #52307c;
+  top: -12px;
+  left: -25px;
+  animation-name: c4-move;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+
+}
+.c5{
+  background-color:  #6726b7;
+  top: -75px;
+  left: -32px;
+  animation-name: c5-move;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+
+}
+
+@keyframes c1-move{
+  0%{
+    left: 0px;
+    top: 0px;
+  }
+  20%{
+  left: 32px;
+  top: 25px;
+  }
+  40%{
+    top: 62px;
+    left: 25px;
+  }
+  60%{
+    left: -25px;
+    top: 62px;
+  }
+  80%{
+    left: -32px;
+    top: 25px;
+  }
+  100%{
+    left: 0px;
+    top: 0px;
+  }
+  }
+  @keyframes c2-move{
+    0%{
+      top: 0px;
+      left: 32px;
+    }
+    20%{
+      left: 25px;
+      top: 37px;
+    }
+    40%{
+      left: -25px;
+      top: 37px;
+    }
+    60%{
+      top: 0px;
+    left: -32px;
+    }
+    80%{
+      top: -25px;
+      left: 0px;
+    }
+    100%{
+      top: 0px;
+      left: 32px;
+    }
+    }
+    @keyframes c3-move{
+      0%{
+        top: 12px;
+        left: 25px;
+      }
+      20%{
+        top: 13px;
+        left: -25px;
+      }
+      40%{
+        top: -25px;
+        left: -33px;
+      }
+      60%{
+        top: -50px;
+        left: 0px;
+      }
+      80%{
+        top: -25px;
+        left: 32px;
+      }
+      100%{
+        top: 12px;
+        left: 25px;
+      }
+      }
+      @keyframes c4-move{
+        0%{
+          top: -12px;
+          left: -25px;
+        }
+        20%{
+          top: -50px;
+          left: -32px;
+        }
+        40%{
+          top: -75px;
+          left: 0px;
+        }
+        60%{
+          top: -50px;
+          left: 32px;
+        }
+        80%{
+          top: -12px;
+          left: 25px;
+        }
+        100%{
+          top: -12px;
+          left: -25px;
+        }
+        }
+        @keyframes c5-move{
+          0%{
+            top: -75px;
+            left: -32px;
+          }
+          20%{
+            top: -100px;
+            left: 0px;
+          }
+          40%{
+            top: -75px;
+            left: 32px;
+          }
+          60%{
+            top: -38px;
+            left: 25px;
+          }
+          80%{
+            top: -37px;
+            left: -25px;  
+          }
+          100%{
+            top: -75px;
+            left: -32px;
+          }
+          }
+                
