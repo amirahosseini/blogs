@@ -8,7 +8,7 @@ const Navbar = () => {
 
             <div className="nav-right"> 
                 <h1 className="blue"> home </h1>
-                <h1 className="blue2"> blogs </h1>
+                <h1 className="blue2" ><a href="http://localhost:3000/NewBlog" className="afornewblog"> blogs </a></h1>
             </div>
         </div>
     );

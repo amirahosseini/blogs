@@ -1,27 +1,14 @@
 import { useEffect, useState } from "react";
 import BlogList from "./blogslists";
+import useFetch from "./usefetch";
 
 const Container = () => {
-  const [blogs, setBlogs] = useState(null)
-  const [isLoading , setisLoading]=useState(true)
-
-  useEffect(() => {
-    setTimeout(() => {
-    fetch('http://localhost:8085/blogs')
-    .then(response => {
-      return response.json();
-    })
-    .then(datas => {
-      setBlogs(datas);
-      setisLoading(false)
-    })
-    }, 1500);
-  }, [])
-
+  const {data:blogs , isLoading , Error}=useFetch('http://localhost:8085/blogs')
   return (
     <div className="home">
+      { Error && <div> { Error } </div> }
       {isLoading &&
-         <div className="loading-placement">
+          <div className="loading-placement">
             <div className="centerize row">
               <div className="forpositioning">
                 <div className="circle c1"></div>
@@ -30,7 +17,6 @@ const Container = () => {
                 <div className="circle c4"></div>
                 <div className="circle c5"></div> 
               </div>
-              
             </div>
           </div>}
       {blogs && <BlogList blogs={blogs} />}
